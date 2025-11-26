@@ -29,11 +29,11 @@ jobs:
         uses: m-s-abeer/update-gha-summary-with-workflow-inputs@v1
 
       - name: Build
-        uses: frstprjkt/kernel_build_action@main
+        uses: alessandroaraujo5/kernel_build_action@main
         with:
-          kernel-url: https://github.com/frstprjkt/valeryn_samsung_sm7125
+          kernel-url: https://github.com/alessandroaraujo5/Kernel-Lineage-23-guamp.git
           kernel-branch: ${{ github.event.inputs.kernel-branch }}
-          config: vendor/samsung/sm7125_defconfig vendor/samsung/${{ github.event.inputs.device-codename }}.config
+          config: guamp_defconfig
           arch: arm64
           ksu: true
           ksu-skip-patch: true
