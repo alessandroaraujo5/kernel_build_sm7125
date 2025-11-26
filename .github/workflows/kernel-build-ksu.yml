@@ -19,6 +19,7 @@ on:
         options:
         - a72q
         - a52q
+        - guamp
 
 jobs:
   build-kernel:
@@ -32,7 +33,7 @@ jobs:
         uses: alessandroaraujo5/kernel_build_action@main
         with:
           kernel-url: https://github.com/alessandroaraujo5/Kernel-Lineage-23-guamp.git
-          kernel-branch: ${{ github.event.inputs.kernel-branch }}
+          kernel-branch: lineage-23.0
           config: guamp_defconfig
           arch: arm64
           ksu: true
